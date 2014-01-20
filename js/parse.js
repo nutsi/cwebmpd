@@ -18,7 +18,6 @@ function parseFileName(str) {
 };
 
 exports.playlist = function playlist(str) {
-    console.log(str);
     var parsed
         , data = [];
     var hasArtist = false,
