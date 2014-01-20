@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <title>cwebmpd</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!-- === Styles Twitter Bootstrap -->
+        <!--V 3.0.1 ...-->
+        <link href="/js/lib/bootstrap/css/bootstrap.css" rel="stylesheet">
+        <link href="/js/lib/bootstrap/css/bootstrap-theme.css" rel="stylesheet">
+        <link href="/stylesheets/font-awesome.css" rel="stylesheet">
+
+        <!-- === à insérer entre les 2 <link> === -->
+        <style>
+            body {
+            padding-top: 60px;
+            /* 60px pour mettre un peu d'espace entre la barre de titre et le contenu */
+            padding-bottom: 40px;
+            }
+            .next { cursor: pointer; }
+            .playback{ cursor: pointer; }
+            .prev{ cursor: pointer; }
+            .table{ cursor: pointer; }
+            .playlist { font-size: 14px; } 
+            .groups { font-size: 14px; }
+            .controls { font-size: 30px;}
+        </style>
+
+
+    </head>
+
+    <!-- === ici votre IHM === -->
+    <body>
+
+        <!--
+        les classes css "navbar navbar-inverse navbar-fixed-top", "navbar-header", "container",
+        "brand", "jumbotron" (anciennement hero-unit)
+        viennent de la feuille de style "twitter bootstrap v3 !"
+        -->
+        <div class="navbar navbar-inverse navbar-fixed-top">
+            <div class="navbar-header">
+                <div class="container">
+                    <div class="controls">
+                        <a class="navbar-brand">
+                            <i class="prev fa fa-backward fa-3x"></i>
+                        </a>
+                        <a class="navbar-brand">
+                            <i class="playback fa fa-play fa-3x"></i>
+                        </a>
+                        <a class="navbar-brand">
+                            <i class="next fa fa-forward fa-3x"></i>
+                        </a>
+                    </div>
+                    <div class="song">
+                        <a class="navbar-brand">
+                            <div class="title"></div>
+                        <div class="infos">
+                            <span class="artist"></span> - <span class="album"></span>
+                        </div>
+                        </a>
+                    </div>
+                    <a class="navbar-brand">
+                        <input class="form-control" type="text" name="searchingsong" id="searchingsong" placeholder="Title" size="30"/> </a>
+                </div>
+                      <a href="#playlist">Playlist</a>
+                            <a href="#songs">Collection</a>
+            </div>
+        </div>
+
+        <div class="container-fluid">
+            <div class="jumbotron">
+                <div class="playlist">
+                <table class="table table-condensed">
+                    <thead>
+                        <tr>
+                            <th> Id </th>
+                            <th>Title</th>
+                            <th>Duration</th>
+                            <th>Artist</th>
+                            <th>Album</th>
+                            <th>Genre</th>
+                        </tr>
+                    </thead>
+                      <tbody>
+                      
+                            </tbody></table>
+                            </div>
+                            <div class="groups hidden">
+                                <table class="table table-condensed">
+                                    <thead>
+                                        <tr>
+                                            <th>Title</th>
+                                            <th>Duration</th>
+                                            <th>Artist</th>
+                                            <th>Album</th>
+                                            <th>Genre</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                </tbody></table>
+                                <tlist>
+                                    
+                                </tlist>
+                            </div>
+            </div>
+        </div>
+
+
+    </body>
+    <!-- === Références aux Frameworks === -->
+    <script src="/js/lib/jquery-1.10.1.js"></script><!--V 1.10.2 -->
+    <script src="/js/lib/underscore.js"></script><!--V 1.5.2 -->
+    <script src="/js/lib/backbone.js"></script><!--V 1.1.0 -->
+    <!-- === ici votre code applicatif === -->
+    <script type="text/javascript" src="/js/current-song-model.js"></script>
+    <script type="text/javascript" src="/js/current-song-view.js"></script>
+    <script type="text/javascript" src="/js/status-model.js"></script>
+    <script type="text/javascript" src="/js/controls-view.js"></script>
+    <script type="text/javascript" src="/js/hiddeable-view.js"></script>
+    <script type="text/javascript" src="/js/playlist-collection.js"></script>
+    <script type="text/javascript" src="/js/playlist-view.js"></script>
+    <script type="text/javascript" src="/js/songs-collection.js"></script>
+    <script type="text/javascript" src="/js/songs-view.js"></script>
+    <script type="text/javascript" src="/js/router.js"></script>
+    <script src="/js/app.js"></script><!--V 1.1.0 -->
+    <script>
+    </script>
+</html>
