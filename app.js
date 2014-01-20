@@ -102,11 +102,6 @@ app.post('/playidsong', function(req, res, next) {
     });
 });
 
-app.get('/playlistsearch', function(req, res, next) {
-    client.playlistsearch(req, function(err, song) {
-        res.json(song);
-    });
-});
 
 app.get('/collection', function(req, res, next) {
     client.collection(req, function(err, song) {
