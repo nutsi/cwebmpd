@@ -51,7 +51,6 @@ exports.playlist = function playlist(str) {
                 if (parsed[0] == 'Genre') hasGenre= true;
                 if (parsed[0] == 'Album') hasAlbum= true;
                 if (parsed[0] == 'Artist') hasArtist= true;
-                console.log(parsed);
                 if (parsed[0] != 'Last-Modified')
                 data[data.length - 1][parsed[0]] = parsed[1];
             }
