@@ -16,7 +16,7 @@ var express = require('express')
 var app = express();
 
 // all environments
-app.set('port', process.env.PORT || 3000);
+app.set('port', 3050);
 app.set('views', __dirname + '/views');
 app.engine('html', cons.swig);
 app.use(express.favicon());
@@ -37,6 +37,7 @@ client.on('ready', function() {
   var server = http.createServer(app)
     , wss = new ws.Server({server: server});
 
+console.log(app.get('port'));
 server.listen(app.get('port'), function(){
     console.log('Express server listening on port ' + app.get('port'));
   });
@@ -98,6 +99,12 @@ app.post('/pause', function(req, res, next) {
 
 app.post('/playidsong', function(req, res, next) {
     client.playid(req.body.id, function(err) {
+        res.json(202, {ok: true});
+    });
+});
+
+app.post('/addsongs', function(req, res, next) {
+    client.addsongs(req.body.tags.trim(), req.body.search.trim(), function(err) {
         res.json(202, {ok: true});
     });
 });
