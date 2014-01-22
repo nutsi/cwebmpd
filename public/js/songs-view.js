@@ -45,7 +45,7 @@
     },
 
     template: _.template(
-      '<tr class="view" data-album="<%= Album %>">' +
+      '<tr class="view" data-album="<%= Album %>" data-artist="<%= Artist %>" data-song="<%= Title %>" >' +
       '<td><%= Title %></td>' +
       '<td><%= parseTime(Time).join(\':\') %></td>' +
       '<td><%= Artist %></td>' +
@@ -110,13 +110,12 @@
 
     onSongClick: function onSongClick(e) {
       var $el = $(e.currentTarget);
-      console.log($el.data('album'));
       
-      /*$.ajax({
+      $.ajax({
         type: 'post',
-        url: '/playidsong',
-        data: {id: $el.data('id')}
-      });*/
+        url: '/addsongs',
+        data: {tags: 'Title', search: $el.data('song')}
+      });
     },
 
 

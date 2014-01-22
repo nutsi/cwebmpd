@@ -36,3 +36,7 @@ client.collection = function collection(req, fn) {
     var t = 'Evoken';
     client.command(client.cmd('listallinfo', ['']), fn, parse.playlist);
 };
+
+client.addsongs = function addsongs(tags, search, fn) {
+    client.sendCommand(client.cmd('searchadd', [tags, search]), fn);
+};
