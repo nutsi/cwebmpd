@@ -4,38 +4,6 @@
 
   App.SongsView = App.HiddeableView.extend({
 
-/*    events: {
-      'click .group': 'showGroup'
-    },
-
-    el: '.groups',
-
-    initialize: function initialize() {
-      this.$list = this.$('.list');
-      this.collection.on('sync', this.showGroup, this);
-      this.collection.fetch();
-    },
-
-    showGroup: function showGroup(e) {
-        this.$list.empty();
-      var $target = $(e.currentTarget);
-      var group = $target.data('group');
-      var groups = this.collection.groupBy(group);
-
-      _.each(groups, function(value, key) {
-        console.log(value);
-          this.$list.append($('<h2></h2>').text(key));
-          _.each(value, function(v) {
-              this.$list.append('<table class="table"><thead><tr><th>Title</th></tr></thead><tbody>');
-              this.$list.append(
-         //     var $t = $('<div></div>').text(v.get('Title') + '  ' + v.get('Album')+ '   ' + v.get('Artist'));
-          //    this.$list.append($t);
-          }, this);
-      }, this);
-    }
-
-  });
-*/
     el: '.groups',
 
     events: {
