@@ -1,0 +1,15 @@
+{
+    "name": "cwebmpd",
+    "version": "1.0.0",
+    "private": true,
+    "scripts": {
+        "start": "node app.js"
+    },
+    "dependencies": {
+        "express": "*",
+        "consolidate": "*",
+        "mpd": "*",
+        "swig": "*",
+        "ws": "*"
+    }
+}
