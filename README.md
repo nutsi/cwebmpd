@@ -20,4 +20,5 @@ Enjoy !
 - Show current playlist
 - Change current song
 - play/pause next song\prev song
+- stop command (with the same button than play/pause for playing) and a new one to stop music 
 - Adding songs/album/artist to the current playlist
