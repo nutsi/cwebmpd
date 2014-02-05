@@ -7,6 +7,7 @@
     states: {
       PAUSE: ' pause',
       PLAY: ' play',
+      STOP: ' stop',
     },
 
     initialize: function initialize() {
@@ -22,8 +23,16 @@
       return this.get('state') == this.states.PAUSE;
     },
 
+    isStoping: function isStoping() {
+        return this.get('state') == this.states.STOP;
+    },
+
     isPlaying: function isPlaying() {
       return this.get('state') == this.states.PLAY;
+    },
+
+    songID: function songID() {
+        return this.get('songid');
     }
 
   });
