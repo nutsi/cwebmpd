@@ -9,7 +9,8 @@
         events: {
             'click .next': 'next',
         'click .prev': 'prev',
-        'click .playback': 'playback'
+        'click .playback': 'playback',
+        'click .stop': 'stop'
         },
 
         initialize: function initialize() {
@@ -35,6 +36,14 @@
             $.ajax({
                 type: 'post',
             url: '/next',
+            data: {}
+            });
+        },
+
+        stop: function stop() {
+            $.ajax({
+                type: 'post',
+            url: '/stop',
             data: {}
             });
         },

@@ -110,10 +110,15 @@ app.post('/addsongs', function(req, res, next) {
     });
 });
 
+app.post('/stop', function(req, res, next) {
+    client.stop(function(err) {
+        res.json(202, {ok: true}); 
+    });
+});
+
 
 app.get('/collection', function(req, res, next) {
     client.collection(req, function(err, song) {
         res.json(song);
     });
 });
-

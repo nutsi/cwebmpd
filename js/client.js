@@ -40,3 +40,7 @@ client.collection = function collection(req, fn) {
 client.addsongs = function addsongs(tags, search, fn) {
     client.sendCommand(client.cmd('searchadd', [tags, search]), fn);
 };
+
+client.stop = function stop(fn) {
+    client.sendCommand('stop', fn);
+};
