@@ -63,11 +63,13 @@
                     <a class="navbar-brand">
                         <input class="form-control" type="text" name="searchingsong" id="searchingsong" placeholder="Title" size="30"/> </a>
                 </div>
-                      <a href="#playlist">Playlist</a>
-                            <a href="#songs">Collection</a>
+                <ul class="nav nav-tabs nav-pills">
+                    <li> <a href="#playlist">Playlist</a></li>
+                    <li><a href="#songs">Collection</a></li>
+                </ul>
             </div>
         </div>
-
+        <br>
         <div class="container-fluid">
             <div class="jumbotron">
                 <div class="playlist">
@@ -87,6 +89,9 @@
                             </tbody></table>
                             </div>
                             <div class="groups hidden">
+                                <input type="checkbox" id="check-artist">Artist</input>
+                                <input type="checkbox" id="check-album">Album</input>
+                                <input type="checkbox" id="check-song">Song</input>
                                 <table class="table table-condensed">
                                     <thead>
                                         <tr>

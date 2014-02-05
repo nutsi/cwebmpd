@@ -79,11 +79,29 @@
     onSongClick: function onSongClick(e) {
       var $el = $(e.currentTarget);
       
-      $.ajax({
-        type: 'post',
-        url: '/addsongs',
-        data: {tags: 'Title', search: $el.data('song')}
-      });
+      var attr = document.getElementById('check-artist');
+      var attr2 = document.getElementById('check-album');
+      if (attr.checked) {
+          $.ajax({
+              type: 'post',
+              url: '/addsongs',
+              data: {tags: 'Artist', search: $el.data('artist')}
+          });
+      }
+      else if (attr2.checked) {
+          $.ajax({
+              type: 'post',
+              url: '/addsongs',
+              data: {tags: 'Album', search: $el.data('album')}
+          });
+      }
+      else {
+          $.ajax({
+              type: 'post',
+              url: '/addsongs',
+              data: {tags: 'Title', search: $el.data('song')}
+          });
+      }
     },
 
 
